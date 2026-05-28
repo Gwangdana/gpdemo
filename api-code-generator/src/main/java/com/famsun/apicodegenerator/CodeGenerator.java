@@ -49,23 +49,14 @@ public class CodeGenerator {
                             .enableLombok()
                             .addSuperEntityColumns("id", "add_time", "update_time", "add_user_id", "add_user_name", "update_user_id", "update_user_name")
                             // 2. Mapper 配置
-                            .mapperBuilder()
-                            .superClass("com.famsun.momapi.core.mapper.BaseMapper")
-                            .enableMapperAnnotation()
-                            // 3. Service 配置（关键修正：适配新版 API，无 interface 实现类）
-                            .serviceBuilder()
-                            .superServiceClass("com.famsun.momapi.core.service.BaseService")
-                            .formatServiceFileName("%sService")
-                            .formatServiceImplFileName("%sService") // 让接口和实现类同名，只生成一个文件
-                            // 4. Controller 配置（可选）
-                            .controllerBuilder()
+                            .mapperBuilder();
+                            // Service配置：【关键】不生成接口，只用自定义模板
+                    // 4. Controller 配置（可选）
+                    builder.controllerBuilder()
                             .enableRestStyle();
                 })
+                .templateEngine(new FreemarkerTemplateEngine())
                 // 模板配置（使用自定义 service 模板）
-                .templateConfig(builder -> {
-                    builder.service("/templates/service.java.ftl") // 指向自定义模板
-                            .serviceImpl(null); // 不生成 impl 文件
-                })
                 .templateEngine(new FreemarkerTemplateEngine())
                 .execute();
     }
