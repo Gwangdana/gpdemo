@@ -214,4 +214,5 @@ public abstract class BaseService<M extends BaseMapper<T>, T extends BaseEntity>
         }
         return super.updateBatchById(entityList, batchSize);
     }
+
 }

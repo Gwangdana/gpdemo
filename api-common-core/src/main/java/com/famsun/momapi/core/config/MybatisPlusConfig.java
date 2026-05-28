@@ -20,10 +20,4 @@ public class MybatisPlusConfig {
         return interceptor;
     }
 
-    static {
-        // 全局开启驼峰转换（SpringBoot默认开启，显式声明增强可读性）
-        com.baomidou.mybatisplus.core.config.GlobalConfig.DbConfig dbConfig =
-                new com.baomidou.mybatisplus.core.config.GlobalConfig.DbConfig();
-        dbConfig.setColumnLike(true);
-    }
 }

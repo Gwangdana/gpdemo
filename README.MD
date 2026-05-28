@@ -1,0 +1,14 @@
+- GP_DEMO
+  - 架构
+    - api-common-core     公共基础模块
+    - api-common-security 公共鉴权模块
+    - api-proxy-app       API中台
+    - api-code-generator  代码生成器
+  - 技术栈&开发环境
+    - JAVA21 
+    - SPRINGBOOT3.5.14
+    - DOCKER
+      - MYSQL 8.4.9
+      - NACOS 2.3.2
+      - REDIS 7.2
+    - MYBATISPLUS 3.5.16
