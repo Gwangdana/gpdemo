@@ -1,0 +1,5 @@
+com\famsun\momapi\core\config\RedisConfig.class
+com\famsun\momapi\core\entity\BaseEntity.class
+com\famsun\momapi\core\handler\BaseHandler.class
+com\famsun\momapi\core\service\BaseService.class
+com\famsun\momapi\core\config\MybatisPlusConfig.class

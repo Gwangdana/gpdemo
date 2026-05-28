@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="api-code-generator" />
+        <module name="api-common-security" />
+        <module name="api-proxy-app" />
+        <module name="api-common-core" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="api-common-aspect" target="1.5" />
+      <module name="api-common-config" target="1.5" />
+      <module name="api-proxy-main" target="21" />
+      <module name="gpdemo.main" target="21" />
+      <module name="gpdemo.test" target="21" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api-code-generator" options="" />
+      <module name="api-common-core" options="" />
+      <module name="api-common-security" options="" />
+      <module name="api-proxy-app" options="" />
+      <module name="api-proxy-main" options="" />
+      <module name="gpdemo" options="" />
+      <module name="gpdemo.main" options="-parameters" />
+      <module name="gpdemo.test" options="-parameters" />
+    </option>
+  </component>
+</project>
