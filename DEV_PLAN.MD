@@ -4,5 +4,7 @@
   - core模块开发
     - 配置redis
     - 配置基类
+  - Generator类文件生成
   - security开发
     - 生成app_info相关实体类及service类等
+    - 功能开发
