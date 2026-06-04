@@ -36,5 +36,4 @@ public class BaseAppInfo extends BaseEntity {
 
     private String remark;
 
-    private LocalDateTime updatdeTime;
 }
