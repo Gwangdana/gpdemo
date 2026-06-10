@@ -1,8 +1,6 @@
 package com.famsun.momapi.app.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.IdWorker;
 import com.famsun.momapi.app.entity.BaseAppInfo;
 import com.famsun.momapi.app.mapper.BaseAppInfoMapper;
@@ -28,9 +26,9 @@ public class BaseAppInfoService extends BaseService<BaseAppInfoMapper, BaseAppIn
     public void doInsertTest() {
         BaseAppInfo d = new BaseAppInfo();
         d.setId(IdWorker.getId());
-        d.setAppid("2");
-        d.setAppName("gp_user_2");
-        d.setAppkey("123456");
+        d.setAppid("3");
+        d.setAppName("gp_user_3");
+        d.setAppkey("1234563");
         d.setStatus("0");
         this.save(d);
     }

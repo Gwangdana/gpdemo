@@ -9,19 +9,26 @@ import java.time.LocalDateTime;
 @Component
 public abstract class BaseHandler implements MetaObjectHandler {
 
-    @Override
-    public void insertFill(MetaObject metaObject) {
-        // 新增时间：addTime（对应你的BaseEntity字段）
-        this.strictInsertFill(metaObject, "addTime", LocalDateTime::now, LocalDateTime.class);
-        // 更新时间：updateTime（新增时和创建时间一致）
-        this.strictInsertFill(metaObject, "updateTime", LocalDateTime::now, LocalDateTime.class);
+    // 抽通用填充方法，给所有子类调用
+    protected void fillCommonInsert(MetaObject metaObject) {
+        strictInsertFill(metaObject, "addTime", LocalDateTime::now, LocalDateTime.class);
+        strictInsertFill(metaObject, "updateTime", LocalDateTime::now, LocalDateTime.class);
+        // 你的原有操作人填充逻辑放这里
     }
 
-    /**
-     * 更新操作：自动更新更新时间
-     */
+    protected void fillCommonUpdate(MetaObject metaObject) {
+        strictUpdateFill(metaObject, "updateTime", LocalDateTime::now, LocalDateTime.class);
+        // 你的原有更新人填充逻辑放这里
+    }
+
+    // 父类自身默认实现全局填充
+    @Override
+    public void insertFill(MetaObject metaObject) {
+        fillCommonInsert(metaObject);
+    }
+
     @Override
     public void updateFill(MetaObject metaObject) {
-        this.strictUpdateFill(metaObject, "updateTime", LocalDateTime::now, LocalDateTime.class);
+        fillCommonUpdate(metaObject);
     }
 }
