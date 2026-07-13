@@ -1,11 +1,8 @@
 package com.famsun.momapi.app.controller;
 
-import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.famsun.momapi.app.entity.BaseAppInfo;
 import com.famsun.momapi.app.service.BaseAppInfoService;
-import com.famsun.momapi.core.constent.ResultCode;
-import com.famsun.momapi.core.exception.GException;
 import com.famsun.momapi.core.vo.Result;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
