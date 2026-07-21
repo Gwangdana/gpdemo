@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      discovery:
+        enabled: false
+        server-addr: 127.0.0.1:8848
+    gateway:
+      routes:
+        - id: auth
+          uri: http://localhost:9001
+          predicates:
+            - Path=/api/auth/**
+          filters:
+            - StripPrefix=2
+        - id: base
+          uri: http://localhost:9003
+          predicates:
+            - Path=/api/base/**
+          filters:
+            - StripPrefix=2
+
+server:
+  port: 9002
