@@ -11,6 +11,7 @@
     <name>DANA-PLAT</name>
 
     <modules>
+        <module>common</module>
         <module>auth</module>
         <module>gateway</module>
         <module>base</module>
@@ -58,6 +59,11 @@
                 <scope>import</scope>
             </dependency>
             <!-- 内部子模块依赖声明 -->
+            <dependency>
+                <groupId>com.dana</groupId>
+                <artifactId>common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <dependency>
                 <groupId>com.dana</groupId>
                 <artifactId>auth</artifactId>

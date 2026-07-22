@@ -1,4 +1,4 @@
-package com.dana.auth.common;
+package com.dana.common.web;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

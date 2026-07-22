@@ -1,4 +1,4 @@
-package com.dana.auth.common;
+package com.dana.common.web;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.MethodArgumentNotValidException;

@@ -1,19 +1,17 @@
-package com.dana.base.util;
+package com.dana.common.auth;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 
 import javax.crypto.SecretKey;
 import java.nio.charset.StandardCharsets;
 
 /**
- * JWT 工具类（base 服务专用，仅做解析校验）
+ * JWT 工具类（公共模块，仅做解析校验）
  */
-@Component
-public class BaseJwtUtil {
+public class CommonJwtUtil {
 
     @Value("${jwt.secret}")
     private String secret;

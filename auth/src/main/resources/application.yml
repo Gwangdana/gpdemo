@@ -39,3 +39,8 @@ server:
 jwt:
   secret: dana-gpdemo-jwt-secret-key-2026-must-be-at-least-256-bits-long
   expiration: 86400000
+
+# auth 服务本身不需要鉴权拦截
+common:
+  auth:
+    enabled: false
