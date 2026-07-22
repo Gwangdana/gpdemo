@@ -28,6 +28,7 @@
         <lombok.version>1.18.46</lombok.version>
         <redisson.version>3.25.0</redisson.version>
         <hutool.version>5.8.26</hutool.version>
+        <jjwt.version>0.12.6</jjwt.version>
     </properties>
 
     <dependencyManagement>

@@ -6,6 +6,17 @@ spring:
       discovery:
         enabled: false
         server-addr: 127.0.0.1:8848
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: Redis@123456
+      database: 0
+      timeout: 5000ms
 
 server:
   port: 9003
+
+# JWT 配置（与 auth 服务保持一致）
+jwt:
+  secret: dana-gpdemo-jwt-secret-key-2026-must-be-at-least-256-bits-long

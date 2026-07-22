@@ -7,5 +7,35 @@ spring:
         enabled: false
         server-addr: 127.0.0.1:8848
 
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dana_dev?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: root@123456
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: Redis@123456
+      database: 0
+      timeout: 5000ms
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
 server:
   port: 9001
+
+# JWT 配置
+jwt:
+  secret: dana-gpdemo-jwt-secret-key-2026-must-be-at-least-256-bits-long
+  expiration: 86400000
