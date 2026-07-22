@@ -6,10 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="common" />
+        <module name="common-security" />
         <module name="auth" />
+        <module name="common-redis" />
         <module name="gateway" />
         <module name="base" />
+        <module name="common-core" />
+        <module name="common-db" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

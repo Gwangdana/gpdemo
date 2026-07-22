@@ -1,6 +1,6 @@
 package com.dana.auth.controller;
 
-import com.dana.common.web.Result;
+import com.dana.common.core.web.Result;
 import com.dana.auth.dto.LoginRequest;
 import com.dana.auth.dto.LoginResponse;
 import com.dana.auth.service.AuthService;

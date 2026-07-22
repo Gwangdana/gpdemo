@@ -18,7 +18,15 @@
         <!-- 公共模块 -->
         <dependency>
             <groupId>com.dana</groupId>
-            <artifactId>common</artifactId>
+            <artifactId>common-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.dana</groupId>
+            <artifactId>common-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.dana</groupId>
+            <artifactId>common-db</artifactId>
         </dependency>
 
         <!-- Spring Boot Actuator -->
