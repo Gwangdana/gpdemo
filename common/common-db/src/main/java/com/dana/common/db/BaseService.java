@@ -108,13 +108,12 @@ public abstract class BaseService<M extends BaseMapper<T>, T extends BaseEntity>
     }
 
     /**
-     * 判断数据是否存在（优化：limit 1 避免全表扫描）
+     * 判断数据是否存在（兼容 MySQL / Oracle 等多种数据库）
      */
     public boolean exists(LambdaQueryWrapper<T> queryWrapper) {
         if (Objects.isNull(queryWrapper)) {
             return false;
         }
-        queryWrapper.last("LIMIT 1");
         return super.count(queryWrapper) > 0;
     }
 

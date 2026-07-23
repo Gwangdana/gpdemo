@@ -10,9 +10,9 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>base</artifactId>
-    <name>base</name>
-    <description>基础数据微服务</description>
+    <artifactId>fpds</artifactId>
+    <name>fpds</name>
+    <description>FPDS业务微服务（Oracle数据源）</description>
 
     <dependencies>
         <!-- 公共模块 -->
@@ -28,11 +28,15 @@
             <groupId>com.dana</groupId>
             <artifactId>common-db</artifactId>
         </dependency>
-
-        <!-- MySQL JDBC Driver -->
         <dependency>
-            <groupId>com.mysql</groupId>
-            <artifactId>mysql-connector-j</artifactId>
+            <groupId>com.dana</groupId>
+            <artifactId>common-redis</artifactId>
+        </dependency>
+
+        <!-- Oracle JDBC Driver -->
+        <dependency>
+            <groupId>com.oracle.database.jdbc</groupId>
+            <artifactId>ojdbc11</artifactId>
         </dependency>
 
         <!-- Spring Boot Actuator -->
@@ -53,7 +57,7 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
 
-        <!-- Spring Cloud Bootstrap（Nacos配置加载需要） -->
+        <!-- Spring Cloud Bootstrap -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bootstrap</artifactId>

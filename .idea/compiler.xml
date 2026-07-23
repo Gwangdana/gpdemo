@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="common-security" />
         <module name="auth" />
+        <module name="fpds" />
         <module name="common-redis" />
         <module name="gateway" />
         <module name="base" />

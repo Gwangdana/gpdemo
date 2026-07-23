@@ -15,6 +15,7 @@
         <module>auth</module>
         <module>gateway</module>
         <module>base</module>
+        <module>fpds</module>
     </modules>
 
     <!-- 全局版本统一管理 -->
@@ -30,6 +31,7 @@
         <redisson.version>3.25.0</redisson.version>
         <hutool.version>5.8.26</hutool.version>
         <jjwt.version>0.12.6</jjwt.version>
+        <oracle.jdbc.version>21.9.0.0</oracle.jdbc.version>
     </properties>
 
     <dependencyManagement>
@@ -93,6 +95,17 @@
                 <groupId>com.dana</groupId>
                 <artifactId>base</artifactId>
                 <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.dana</groupId>
+                <artifactId>fpds</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <!-- Oracle JDBC Driver -->
+            <dependency>
+                <groupId>com.oracle.database.jdbc</groupId>
+                <artifactId>ojdbc11</artifactId>
+                <version>${oracle.jdbc.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

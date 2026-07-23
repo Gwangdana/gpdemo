@@ -12,7 +12,7 @@
 
     <artifactId>common-db</artifactId>
     <name>common-db</name>
-    <description>数据库公共模块：BaseEntity、BaseService、MyBatis-Plus 配置</description>
+    <description>数据库公共模块：BaseEntity、BaseService、MyBatis-Plus 配置（DB 无关，自动识别数据库类型）</description>
 
     <dependencies>
         <!-- common-core -->
@@ -43,10 +43,6 @@
             <version>${mybatis.plus.version}</version>
         </dependency>
 
-        <!-- MySQL Driver -->
-        <dependency>
-            <groupId>com.mysql</groupId>
-            <artifactId>mysql-connector-j</artifactId>
-        </dependency>
+        <!-- JDBC 驱动由各业务微服务自行引入（MySQL / Oracle 等） -->
     </dependencies>
 </project>
