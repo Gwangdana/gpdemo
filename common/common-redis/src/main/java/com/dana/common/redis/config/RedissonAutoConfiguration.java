@@ -10,6 +10,8 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 
+import java.time.Duration;
+
 /**
  * Redisson 自动配置
  * <p>
@@ -32,8 +34,8 @@ public class RedissonAutoConfiguration {
     @Value("${spring.data.redis.database:0}")
     private int database;
 
-    @Value("${spring.data.redis.timeout:5000}")
-    private int timeout;
+    @Value("${spring.data.redis.timeout:5000ms}")
+    private Duration timeout;
 
     @Bean(destroyMethod = "shutdown")
     @ConditionalOnMissingBean(RedissonClient.class)
@@ -42,7 +44,7 @@ public class RedissonAutoConfiguration {
         SingleServerConfig serverConfig = config.useSingleServer()
                 .setAddress("redis://" + host + ":" + port)
                 .setDatabase(database)
-                .setTimeout(timeout)
+                .setTimeout((int) timeout.toMillis())
                 .setConnectionMinimumIdleSize(2)
                 .setConnectionPoolSize(8);
 
