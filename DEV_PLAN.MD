@@ -10,3 +10,19 @@
     - 功能开发
 - 2026-07-13
   - 在新电脑上更新项目
+- 2026-7-21
+  - 调整项目架构及springboot选型
+  - 技术栈&开发环境
+    - JAVA21
+    - SPRINGBOOT3.2.12
+      - SPRINGCLOUD
+    - DOCKER
+      - MYSQL 8.4.9
+      - NACOS 2.3.2
+      - REDIS 7.2
+    - MYBATISPLUS 3.5.17
+  - 完成token鉴权
+    - 接口拦截
+    - 鉴权抽象成全局通用
+  - 完成基类维护
+  - 完成基础全局异常及结果集维护

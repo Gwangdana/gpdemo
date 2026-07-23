@@ -1,14 +1,14 @@
 - GP_DEMO
   - 架构
-    - api-common-core     公共基础模块
-    - api-common-security 公共鉴权模块
-    - api-proxy-app       API中台
-    - api-code-generator  代码生成器
+    - auth      鉴权
+    - gateway   路由
+    - base      基础数据
+    - core      基类
   - 技术栈&开发环境
     - JAVA21 
-    - SPRINGBOOT3.5.14
+    - SPRINGBOOT3.2.12
     - DOCKER
       - MYSQL 8.4.9
       - NACOS 2.3.2
-      - REDIS 7.2
+      - REDIS 7.2.bookworm
     - MYBATISPLUS 3.5.16

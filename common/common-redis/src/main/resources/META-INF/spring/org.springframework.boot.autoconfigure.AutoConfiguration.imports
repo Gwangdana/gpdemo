@@ -1,0 +1,2 @@
+com.dana.common.redis.config.RedissonAutoConfiguration
+com.dana.common.redis.config.RedisCommonAutoConfiguration
