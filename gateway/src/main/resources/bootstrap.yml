@@ -1,5 +1,9 @@
 spring:
   cloud:
     nacos:
+      server-addr: localhost:8848
+      username: nacos
+      password: nacos
       config:
-        enabled: false
+        file-extension: yaml
+        group: DEFAULT_GROUP

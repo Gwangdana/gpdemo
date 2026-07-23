@@ -1,5 +1,17 @@
 spring:
   cloud:
     nacos:
+      server-addr: localhost:8848
+      username: nacos
+      password: nacos
       config:
-        enabled: false
+        file-extension: yaml
+        group: DEFAULT_GROUP
+        # 共享配置（多个微服务共用的配置）
+        shared-configs:
+          - data-id: common-datasource.yaml
+            group: DEFAULT_GROUP
+            refresh: true
+          - data-id: common-redis.yaml
+            group: DEFAULT_GROUP
+            refresh: true
